@@ -4,6 +4,8 @@
 
 ### **Intelligent Rooftop Solar Planning, Energy Analytics & Budget Optimization**
 
+🌐 **Live Demo (AWS CloudFront):** https://d2pxwgtcwn203c.cloudfront.net/
+
 <p align="center">
   A full-stack software platform designed to help institutions, commercial facilities, and multi-building campuses evaluate rooftop solar opportunities through geospatial analysis, solar forecasting, constrained budget optimization, and asset performance diagnostics.
 </p>
