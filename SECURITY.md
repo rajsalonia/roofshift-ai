@@ -15,7 +15,7 @@ The RoofShift AI team takes application security seriously.
 
 If you discover a security vulnerability or potential credential exposure:
 1. **Do not create a public GitHub issue.**
-2. Send a responsible disclosure report via private communication to the project maintainers (@17rajsal).
+2. Send a responsible disclosure report via private communication to the project maintainers (@rajsalonia).
 3. Provide detailed steps to reproduce the issue, along with proof of concept if available.
 
 ### Scope:
@@ -23,4 +23,4 @@ If you discover a security vulnerability or potential credential exposure:
 - Improper CORS configurations or unauthorized API exposure.
 - Information disclosure in API responses.
 
-We will acknowledge receipt within 48 hours and work on a remediation fix promptly.
+Reports will be reviewed when received. Please allow time for investigation and coordinated remediation; no fixed response-time guarantee is implied.
