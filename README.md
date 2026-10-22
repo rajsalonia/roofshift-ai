@@ -4,7 +4,7 @@
 
 ### **Intelligent Rooftop Solar Planning, Energy Analytics & Budget Optimization**
 
-**[Live website — AWS CloudFront](https://d2pxwgtcwn203c.cloudfront.net/) · [GitHub repository](https://github.com/rajsalonia/roofshift-ai) · [Quick start](#8-installation--quick-start) · [API contracts](API_CONTRACTS.md) · [Security policy](SECURITY.md)**
+**[Live website — AWS CloudFront](https://d2pxwgtcwn203c.cloudfront.net/) · [GitHub repository](https://github.com/rajsalonia/roofshift-ai) · [Quick start](#8-installation--quick-start) · [API contracts](API_CONTRACTS.md) · [Contributing](CONTRIBUTING.md) · [Security policy](SECURITY.md)**
 
 <p align="center">
   A full-stack software platform designed to help institutions, commercial facilities, and multi-building campuses evaluate rooftop solar opportunities through geospatial analysis, solar forecasting, constrained budget optimization, and asset performance diagnostics.
@@ -450,7 +450,7 @@ roofshift-ai/
 
 ## 15. Maintainer & Contact
 
-- **Project Lead & Maintainer:** [@rajsalonia](https://github.com/17rajsal)
+- **Project Lead & Maintainer:** [@rajsalonia](https://github.com/rajsalonia)
 - **Repository:** [https://github.com/rajsalonia/roofshift-ai](https://github.com/rajsalonia/roofshift-ai)
 
 ---
