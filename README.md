@@ -4,22 +4,22 @@
 
 ### **Intelligent Rooftop Solar Planning, Energy Analytics & Budget Optimization**
 
-🌐 **Live Demo (AWS CloudFront):** https://d2pxwgtcwn203c.cloudfront.net/
+🌐 **Deployed application URL (availability not independently verified during this documentation review):** https://d2pxwgtcwn203c.cloudfront.net/
 
 <p align="center">
   A full-stack software platform designed to help institutions, commercial facilities, and multi-building campuses evaluate rooftop solar opportunities through geospatial analysis, solar forecasting, constrained budget optimization, and asset performance diagnostics.
 </p>
 
-[![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.14-3776AB?logo=python&logoColor=white)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react&logoColor=black)](https://react.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Python](https://img.shields.io/badge/Python-Backend-3776AB?logo=python&logoColor=white)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
 [![NASA POWER](https://img.shields.io/badge/Solar_Data-NASA_POWER_API-blue)](https://power.larc.nasa.gov)
 [![Docker](https://img.shields.io/badge/Containers-Docker_Compose-2496ED?logo=docker&logoColor=white)](https://docker.com)
 [![Tests](https://img.shields.io/badge/Tests-pytest_suite-3776AB?logo=pytest&logoColor=white)](#11-testing--verification)
-[![Architecture](https://img.shields.io/badge/Engine-Deterministic_OR_Solver-1E293B)](#7-system-architecture)
+[![Architecture](https://img.shields.io/badge/Engine-Deterministic_OR_Solver-1E293B)](#5-system-architecture)
 
 </div>
 
@@ -50,7 +50,7 @@ Digitize building boundaries, calculate usable surface areas via polygon geometr
 ![Interactive Solar Map](docs/assets/roofshift_solar_map.png)
 
 ### Constrained Knapsack Budget Optimizer
-Execute exact Pareto-frontier Multiple-Choice Knapsack optimization to maximize portfolio bill savings against fixed capital budgets, demonstrating an empirical an illustrative comparative financial result over naive allocation strategies.
+Execute exact Pareto-frontier Multiple-Choice Knapsack optimization to maximize portfolio bill savings against fixed capital budgets, with modeled allocation results that can be compared against simpler allocation strategies. Actual savings depend on input assumptions and are not guaranteed.
 
 ![Budget Optimizer Workbench](docs/assets/roofshift_optimizer.png)
 
