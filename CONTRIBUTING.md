@@ -1,6 +1,6 @@
 # Contributing to RoofShift AI
 
-Thank you for your interest in contributing to **RoofShift AI**! This project is an open-source platform designed to make institutional rooftop solar planning and energy optimization accessible, transparent, and mathematically rigorous.
+Thank you for your interest in contributing to **RoofShift AI**! This publicly available project is designed to make institutional rooftop solar planning and energy optimization accessible, transparent, and mathematically rigorous.
 
 ---
 
