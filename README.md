@@ -4,7 +4,7 @@
 
 ### **Intelligent Rooftop Solar Planning, Energy Analytics & Budget Optimization**
 
-🌐 **Live Demo (AWS CloudFront):** https://d2pxwgtcwn203c.cloudfront.net/
+**[Live website — AWS CloudFront](https://d2pxwgtcwn203c.cloudfront.net/) · [GitHub repository](https://github.com/rajsalonia/roofshift-ai) · [Quick start](#8-installation--quick-start) · [API contracts](API_CONTRACTS.md) · [Security policy](SECURITY.md)**
 
 <p align="center">
   A full-stack software platform designed to help institutions, commercial facilities, and multi-building campuses evaluate rooftop solar opportunities through geospatial analysis, solar forecasting, constrained budget optimization, and asset performance diagnostics.
@@ -22,6 +22,9 @@
 [![Architecture](https://img.shields.io/badge/Engine-Deterministic_OR_Solver-1E293B)](#7-system-architecture)
 
 </div>
+
+> [!NOTE]
+> **Benchmark vs. observed results:** The 22.4% optimization figure describes a modeled scenario relative to a specified baseline. It is not measured savings from an operating solar installation. Energy, shading, ROI, and financial outputs depend on input assumptions and data quality.
 
 ---
 
@@ -50,7 +53,7 @@ Digitize building boundaries, calculate usable surface areas via polygon geometr
 ![Interactive Solar Map](docs/assets/roofshift_solar_map.png)
 
 ### Constrained Knapsack Budget Optimizer
-Execute exact Pareto-frontier Multiple-Choice Knapsack optimization to maximize portfolio bill savings against fixed capital budgets, demonstrating an empirical **+22.4% net annual financial lift** over naive allocation strategies.
+Execute exact Pareto-frontier Multiple-Choice Knapsack optimization to maximize portfolio bill savings against fixed capital budgets, demonstrating **+22.4% modeled net annual financial lift compared with a naive allocation baseline in a documented benchmark scenario**.
 
 ![Budget Optimizer Workbench](docs/assets/roofshift_optimizer.png)
 
@@ -244,7 +247,7 @@ RoofShift AI includes an adaptive cloud architecture designed for Amazon Web Ser
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/17rajsal/roofshift-ai.git
+git clone https://github.com/rajsalonia/roofshift-ai.git
 cd roofshift-ai
 
 # 2. Setup backend virtual environment
@@ -267,7 +270,7 @@ npm run dev
 
 ```powershell
 # 1. Clone repository
-git clone https://github.com/17rajsal/roofshift-ai.git
+git clone https://github.com/rajsalonia/roofshift-ai.git
 cd roofshift-ai
 
 # 2. Setup backend virtual environment
@@ -447,8 +450,8 @@ roofshift-ai/
 
 ## 15. Maintainer & Contact
 
-- **Project Lead & Maintainer:** [@17rajsal](https://github.com/17rajsal)
-- **Repository:** [https://github.com/17rajsal/roofshift-ai](https://github.com/17rajsal/roofshift-ai)
+- **Project Lead & Maintainer:** [@rajsalonia](https://github.com/17rajsal)
+- **Repository:** [https://github.com/rajsalonia/roofshift-ai](https://github.com/rajsalonia/roofshift-ai)
 
 ---
 
