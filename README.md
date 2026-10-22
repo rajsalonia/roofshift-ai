@@ -18,7 +18,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
 [![NASA POWER](https://img.shields.io/badge/Solar_Data-NASA_POWER_API-blue)](https://power.larc.nasa.gov)
 [![Docker](https://img.shields.io/badge/Containers-Docker_Compose-2496ED?logo=docker&logoColor=white)](https://docker.com)
-[![Tests](https://img.shields.io/badge/Pytest-195%2F195_Passing-10B981?logo=pytest&logoColor=white)](#13-testing)
+[![Tests](https://img.shields.io/badge/Tests-pytest_suite-3776AB?logo=pytest&logoColor=white)](#11-testing--verification)
 [![Architecture](https://img.shields.io/badge/Engine-Deterministic_OR_Solver-1E293B)](#7-system-architecture)
 
 </div>
@@ -50,7 +50,7 @@ Digitize building boundaries, calculate usable surface areas via polygon geometr
 ![Interactive Solar Map](docs/assets/roofshift_solar_map.png)
 
 ### Constrained Knapsack Budget Optimizer
-Execute exact Pareto-frontier Multiple-Choice Knapsack optimization to maximize portfolio bill savings against fixed capital budgets, demonstrating an empirical **+22.4% net annual financial lift** over naive allocation strategies.
+Execute exact Pareto-frontier Multiple-Choice Knapsack optimization to maximize portfolio bill savings against fixed capital budgets, demonstrating an empirical an illustrative comparative financial result over naive allocation strategies.
 
 ![Budget Optimizer Workbench](docs/assets/roofshift_optimizer.png)
 
@@ -115,11 +115,11 @@ RoofShift AI provides 12 specialized capabilities spanning pre-installation plan
 
 ## 5. System Architecture
 
-RoofShift AI is engineered with clean separation of concerns, ensuring high performance, explainability, and full offline local execution capability:
+RoofShift AI is engineered with clean separation of concerns, ensuring high performance, explainability, and local execution capability:
 
 ```mermaid
 graph TD
-    subgraph Client ["Frontend Client (React 18 + TypeScript + Vite)"]
+    subgraph Client ["Frontend Client (React 19 + TypeScript + Vite)"]
         UI_Home["Homepage & Marketing Hub"]
         UI_GIS["Interactive GIS Solar Map (Leaflet)"]
         UI_Opt["Knapsack Optimization Workbench"]
@@ -181,15 +181,15 @@ graph TD
 ## 6. Technology Stack
 
 ### Frontend
-- **Framework:** React 18.3 with TypeScript 5.6
+- **Framework:** React 19 with TypeScript 6
 - **Tooling:** Vite 8.3 (Fast HMR, sub-second production bundling)
-- **Styling:** Tailwind CSS 3.4 with custom design tokens (`#FF6B16` Solar Amber, `#0B1739` Deep Obsidian)
-- **Mapping:** Leaflet 1.9 & React-Leaflet with Leaflet-Draw for custom polygon roof digitizing
-- **Data Visualization:** Recharts 2.x for diurnal coincidence curves and monthly production charts
+- **Styling:** Tailwind CSS 4 with custom design tokens (`#FF6B16` Solar Amber, `#0B1739` Deep Obsidian)
+- **Mapping:** Leaflet 1.9 & React-Leaflet for custom polygon roof digitizing
+- **Data Visualization:** Recharts 3.x for diurnal coincidence curves and monthly production charts
 - **Icons:** Lucide React
 
 ### Backend
-- **Framework:** FastAPI 0.115+ (Asynchronous ASGI framework)
+- **Framework:** FastAPI (see backend/requirements.txt) (Asynchronous ASGI framework)
 - **Language:** Python 3.11 / 3.12 / 3.14 compatible
 - **Data Validation:** Pydantic v2 (Strict typing, serialization, and schema validation)
 - **Database ORM:** SQLAlchemy 2.0 with SQLite (development/offline) and PostgreSQL readiness
@@ -244,7 +244,7 @@ RoofShift AI includes an adaptive cloud architecture designed for Amazon Web Ser
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/17rajsal/roofshift-ai.git
+git clone https://github.com/rajsalonia/roofshift-ai.git
 cd roofshift-ai
 
 # 2. Setup backend virtual environment
@@ -267,7 +267,7 @@ npm run dev
 
 ```powershell
 # 1. Clone repository
-git clone https://github.com/17rajsal/roofshift-ai.git
+git clone https://github.com/rajsalonia/roofshift-ai.git
 cd roofshift-ai
 
 # 2. Setup backend virtual environment
@@ -447,8 +447,8 @@ roofshift-ai/
 
 ## 15. Maintainer & Contact
 
-- **Project Lead & Maintainer:** [@17rajsal](https://github.com/17rajsal)
-- **Repository:** [https://github.com/17rajsal/roofshift-ai](https://github.com/17rajsal/roofshift-ai)
+- **Project Lead & Maintainer:** [@rajsalonia](https://github.com/rajsalonia)
+- **Repository:** [https://github.com/rajsalonia/roofshift-ai](https://github.com/rajsalonia/roofshift-ai)
 
 ---
 
@@ -457,3 +457,6 @@ roofshift-ai/
 **RoofShift AI — Turning rooftop solar potential into explainable, data-informed energy decisions.**
 
 </div>
+
+
+> **Audit note (October 2026):** Installation instructions and historical test output above are repository documentation, not a fresh test run performed for this profile update. Live service availability and AWS integration states were not independently revalidated. The frontend manifest currently specifies React 19, Tailwind CSS 4, TypeScript 6, and Recharts 3.
