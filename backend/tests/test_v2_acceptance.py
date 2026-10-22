@@ -340,7 +340,7 @@ def test_acceptance_11_delhi_demo_campus_workflow():
 
     assert "Delhi College Campus" in demo["name"]
     assert demo["building_count"] == 5
-    assert demo["budget"] == 1500000.0  # Latest Antigravity demo: ₹15 Lakh
+    assert demo["budget"] == 1500000.0  # Demo budget: ₹15 Lakh
 
     # Verify building solar analyses exist
     b_res = client.get(f"/api/v1/projects/{demo['id']}/buildings")

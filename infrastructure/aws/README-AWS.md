@@ -1,6 +1,6 @@
 # RoofShift AI — AWS deployment
 
-The reviewed application can run as the existing Nginx frontend and FastAPI backend containers on EC2. Engine changes should be integrated from `codex/advanced-engines` before choosing the deployment ref; see `ENGINE_HANDOFF.md`.
+The application runs as Nginx frontend and FastAPI backend containers on EC2.
 
 ## Local container verification
 

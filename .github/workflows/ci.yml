@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - antigravity/core-app
       - integration/master-delivery
   pull_request:
     branches:
