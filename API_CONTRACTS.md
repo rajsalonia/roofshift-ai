@@ -1,23 +1,21 @@
 # RoofShift AI — API Contracts & Integration Guide
 **Version:** 2.0.0-PROD
-**Project Maintainer:** @17rajsal
-**Primary Application Branch:** `antigravity/core-app`
-**Advanced Engines Branch:** `codex/advanced-engines`
-**Solar Feature Expansion Branch:** `codex/solar-feature-expansion`
+**Project Maintainer:** @rajsalonia
+**Repository:** [rajsalonia/roofshift-ai](https://github.com/rajsalonia/roofshift-ai)
 
 ---
 
-## 1. Parallel Development Protocols & Ownership Matrix
+## 1. Architectural Module Boundaries & Subsystem Design
 
-The team update of 10 October 2026 assigns complex backend engines to Codex. Application work continues on the current branch, with engine delivery reviewed from an isolated `codex/advanced-engines` checkout. See [ENGINE_HANDOFF.md](ENGINE_HANDOFF.md) for integration and verification requirements.
+RoofShift AI coordinates modular subsystems through explicit API contracts, deterministic mathematical models, and schema validation:
 
-| Area | Primary Owner | Branch | Boundary Rules |
-|------|---------------|--------|----------------|
-| **Application** (`frontend/`, backend API routes, persistence, report presentation, geospatial/storage adapters, `infrastructure/`, AWS configuration) | **App developer** | `antigravity/core-app` | Preserve working features; call engines through the contracts below. |
-| **Advanced Engines** (`backend/app/services/{optimization,energy,scheduling,solar,intelligence}/`, future finance/panel intelligence services, `aws/lambda/solar_processor.py`) | **Codex** | `codex/advanced-engines` | Application work must not edit these modules while engine work is in progress. |
-| **Engine Tests** (existing optimizer/solar acceptance tests and new engine tests) | **Codex** | `codex/advanced-engines` | Deliver tested changes and identify numerical behavior changes. |
-| **Nine Solar Features and Expanded PDFs** (location finder, prediction, faults, monitoring, demand, costs/savings, environmental impact, maintenance, expanded reports) | **Codex** | `codex/solar-feature-expansion` | Freeze independent rewrites of overlapping feature modules until tested branch review. Preserve existing budget, surplus, and scheduling behavior. |
-| **Shared Contracts** (this document, Pydantic schemas, ORM models, dependencies) | **Coordinated** | Review before integration | Keep current fields/units compatible; propose additive schema changes explicitly. |
+| Area | Scope & Modules | Architecture & Integration |
+|------|-----------------|----------------------------|
+| **Application Layer** | `frontend/`, backend API routes (`backend/app/api/`), persistence, report presentation, geospatial/storage adapters, `infrastructure/`, AWS configuration | Coordinates UI flows, GIS interactions, project state, and API transport. |
+| **Advanced Engines** | `backend/app/services/{optimization,energy,scheduling,solar,intelligence}/`, financial modeling, `aws/lambda/solar_processor.py` | Implements deterministic solar climatology, Multiple-Choice Knapsack optimization, and load scheduling. |
+| **Engine Tests** | Existing optimizer/solar acceptance checks and test suite (`backend/tests/`) | Validates numerical convergence, energy conservation, and scenario repeatability. |
+| **Solar Feature Modules** | Location finder, energy yield prediction, panel fault diagnostics, performance monitoring, electricity demand, financial ROI, environmental impact, PDF generation | Domain-specific analytics services exposing standardized schemas. |
+| **Shared Contracts** | Pydantic wire schemas (`backend/app/schemas/`), client models (`frontend/src/types/models.ts`), ORM models | Strong typing and versioned data contracts across backend and frontend. |
 
 ---
 
@@ -404,7 +402,7 @@ from app.services.scheduling.load_shifter import optimize_energy_scheduling
 
 The optional `intelligence` package exports `compute_solar_potential`, `solve_with_ortools_knapsack`, `calculate_activity_shift_benefit`, `explain_building_allocation`, and `estimate_hourly_load_profile`. These are separate helper interfaces; the API does not automatically use them. Route wiring must be explicitly reviewed and tested when integrating engine changes.
 
-The canonical wire schemas are in `backend/app/schemas/` and the matching client types in `frontend/src/types/models.ts`. Monetary values are INR, capacity is kWp, instantaneous profiles are kW, energy totals are kWh, and CO2 is kg. `usable_fraction` in the existing solar helper means a percentage from 0 to 100 despite its name. Existing timestamps without a timezone suffix represent UTC. The nine new feature APIs are pending Codex's tested contract delivery; do not infer endpoints or rewrite feature implementations before review.
+The canonical wire schemas are in `backend/app/schemas/` and the matching client types in `frontend/src/types/models.ts`. Monetary values are INR, capacity is kWp, instantaneous profiles are kW, energy totals are kWh, and CO2 is kg. `usable_fraction` in the existing solar helper means a percentage from 0 to 100 despite its name. Existing timestamps without a timezone suffix represent UTC. The nine new feature APIs are published in the OpenAPI documentation under `/openapi.json`.
 
 Building outlines are stored in `roof_polygon` as unclosed arrays of `[latitude, longitude]` degree pairs. The application estimates map area and sends `gross_roof_area` in m². Engine modules consume the supplied area; they need not interpret Leaflet geometry. Existing buildings without outlines remain supported.
 
@@ -412,9 +410,9 @@ For separately hosted frontends, set `VITE_API_BASE_URL` to the full API base (i
 
 ---
 
-## 5. Verification Commands for Codex QA
+## 5. Verification Commands & Quality Assurance
 
-Codex can execute the following commands in the workspace root to verify system compliance:
+Execute the following commands in the workspace root to verify system compliance:
 
 1. **Backend Tests:**
    ```powershell

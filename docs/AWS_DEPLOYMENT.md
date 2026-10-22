@@ -96,7 +96,7 @@ For scalable serverless deployment:
 
 ### Frontend (AWS Amplify Hosting)
 1. Connect the GitHub repository to the AWS Amplify Console.
-2. Select the `antigravity/core-app` or `main` branch.
+2. Select the `main` branch.
 3. Use the repository's [`amplify.yml`](../amplify.yml) build specification:
    ```yaml
    version: 1
